@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web-container:
+    image: 'httpd:latest'
+    container_name: stepanova-site
+    restart: unless-stopped
+    networks:
+      -network
+    volumes:
+      -./http:/usr/local/apache2/htdocs/
+networks:
+  network:
+    name: nginx
+    external: true
