@@ -5,9 +5,9 @@ services:
     container_name: stepanova-site
     restart: unless-stopped
     networks:
-      -network
+      - network
     volumes:
-      -./http:/usr/local/apache2/htdocs/
+      - ./http:/usr/local/apache2/htdocs/
 networks:
   network:
     name: nginx
