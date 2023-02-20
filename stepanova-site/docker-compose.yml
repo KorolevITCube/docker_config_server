@@ -10,5 +10,5 @@ services:
       - ./http:/usr/local/apache2/htdocs/
 networks:
   network:
-    name: nginx
+    name: nginx-proxy-network
     external: true
